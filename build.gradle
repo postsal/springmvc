@@ -1,0 +1,37 @@
+group 'com.hujian.spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: "idea"
+
+sourceCompatibility = 1.8
+def SpringVersion="4.3.4.RELEASE"
+
+repositories {
+    mavenLocal()
+    maven { url "http://10.16.155.241/nexus/content/groups/public/" }
+    jcenter()
+    mavenCentral()
+    maven { url "http://repo.spring.io/release" }
+    maven { url "https://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+    compile(
+            "org.springframework:spring-context:${SpringVersion}",
+            "org.springframework:spring-context-support:${SpringVersion}",//启用ehcache缓存
+            "org.springframework:spring-web:${SpringVersion}",
+            "org.springframework:spring-webmvc:${SpringVersion}",
+            "org.springframework:spring-test:${SpringVersion}",
+            "org.springframework:spring-beans:${SpringVersion}",
+            "org.springframework:spring-expression:${SpringVersion}",
+            "org.springframework:spring-aop:${SpringVersion}",
+            "org.springframework:spring-aspects:${SpringVersion}",
+            "org.springframework:spring-core:${SpringVersion}",
+            "org.springframework:spring-instrument:${SpringVersion}",
+            "org.springframework:spring-orm:${SpringVersion}",
+    )
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+}
