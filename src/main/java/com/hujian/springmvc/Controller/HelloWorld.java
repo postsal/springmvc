@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloWorld {
     @RequestMapping("/helloWorld")
     public String index(){
-        return "index";
+        return "/UserController/users";
     }
 }
