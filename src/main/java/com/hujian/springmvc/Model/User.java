@@ -32,10 +32,10 @@ public class User implements Serializable {
 
     private String userName;
 
-    private String address;
+    private String nickName;
 
-    private String firstName;
+    private String emailAddress;
 
-    private String lastName;
+    private String password;
 
 }

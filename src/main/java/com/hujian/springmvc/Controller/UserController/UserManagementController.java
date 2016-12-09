@@ -94,9 +94,9 @@ public class UserManagementController {
         User user = userService.getById(userP.getId());
         //User newUser=new User(userP.getId(),userP.getUserName(),userP.getAddress(),userP.getFirstName(),userP.getLastName());
         user.setUserName(userP.getUserName());
-        user.setFirstName(userP.getFirstName());
-        user.setLastName(userP.getLastName());
-        user.setAddress(userP.getAddress());
+        user.setNickName(userP.getNickName());
+        user.setEmailAddress(userP.getEmailAddress());
+        user.setPassword(userP.getPassword());
         userService.saveOrUpdate(user);
         return "redirect:/UserController/";
     }
