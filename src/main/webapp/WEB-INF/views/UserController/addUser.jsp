@@ -26,20 +26,20 @@
     <hr/>
     <form:form action="/UserController/users/add" method="post" commandName="user" role="form">
         <div class="form-group">
-            <label for="firstName">userName:</label>
-            <input type="text" class="form-control" id="nickname" name="userName" placeholder="Enter userName:"/>
+            <label for="userName">userName:</label>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter userName:"/>
         </div>
         <div class="form-group">
-            <label for="firstName">First Name:</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter FirstName:"/>
+            <label for="nickName">First Name:</label>
+            <input type="text" class="form-control" id="nickName" name="nickName" placeholder="Enter nickName:"/>
         </div>
         <div class="form-group">
-            <label for="lastName">Last Name:</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter LastName:"/>
+            <label for="emailAddress">Last Name:</label>
+            <input type="text" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter emailAddress:"/>
         </div>
         <div class="form-group">
-            <label for="address">Address:</label>
-            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address:"/>
+            <label for="password">Address:</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Enter password:"/>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-sm btn-success">提交</button>

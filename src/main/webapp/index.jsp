@@ -19,14 +19,14 @@
     <!-- js -->
     <script src="/assets/js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
-    <script type="text/javascript">
+    <%--<script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event){
                 event.preventDefault();
                 $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
             });
         });
-    </script>
+    </script>--%>
 </head>
 
 <body>
@@ -55,9 +55,9 @@
                             <li class="hvr-bounce-to-bottom"><a href="#" url="" class="redirect">Blog</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">News</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">Photos</a></li>
-                            <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">About Me</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="/UserController/" class="redirect">Manage User</a></li>
                         </ul>
-                        <div class="sign-in">
+                        <div class="sign-in" id="hide">
                             <ul>
                                 <li><a href="#" url="/Account/Login" class="redirect">Sign In </a>/</li>
                                 <li><a href="#" url="/Register/" class="redirect">Register</a></li>

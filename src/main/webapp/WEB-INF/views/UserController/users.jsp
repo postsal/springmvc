@@ -10,7 +10,7 @@
     <title>SpringMVC 用户管理</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,9 +38,9 @@
         <table class="table table-bordered table-striped">
             <tr>
                 <th>ID</th>
-                <th>昵称</th>
                 <th>姓名</th>
-                <th>地址</th>
+                <th>昵称</th>
+                <th>email地址</th>
                 <th>操作</th>
             </tr>
 
@@ -48,8 +48,8 @@
                 <tr>
                     <td>${user.id}</td>
                     <td>${user.userName}</td>
-                    <td>firstName:${user.firstName}  lastName:${user.lastName}</td>
-                    <td>${user.address}</td>
+                    <td>nickName:${user.nickName}</td>
+                    <td>${user.emailAddress}</td>
                     <td>
                         <a href="/UserController/getUser/id/${user.id}" type="button" class="btn btn-sm btn-success">详情</a>
                         <a href="/UserController/modifyUser/id/${user.id}" type="button" class="btn btn-sm btn-warning">修改</a>

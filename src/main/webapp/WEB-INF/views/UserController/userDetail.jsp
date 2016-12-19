@@ -9,7 +9,7 @@
     <title>SpringMVC 用户详情</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,15 +29,15 @@
             <td>${user.id}</td>
         </tr>
         <tr>
-            <th>Nickname</th>
+            <th>userName</th>
             <td>${user.userName}</td>
         </tr>
         <tr>
-            <th>First Name</th>
+            <th>nickName</th>
             <td>${user.firstName}</td>
         </tr>
         <tr>
-            <th>Last Name</th>
+            <th>emailAddress</th>
             <td>${user.lastName}</td>
         </tr>
         <tr>
@@ -48,9 +48,9 @@
 </div>
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 </body>
 </html>
