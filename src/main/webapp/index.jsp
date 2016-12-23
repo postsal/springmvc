@@ -6,17 +6,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% String user= (String) session.getAttribute("userName");
+<% String user = (String) session.getAttribute("userName");
 %>
 <!DOCTYPE html>
 <html>
 <head>
     <title>博客</title>
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
     <!-- //for-mobile-apps -->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="/assets/css/swipebox.css">
     <!-- js -->
     <script src="/assets/js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
@@ -57,7 +62,8 @@
                             <li class="hvr-bounce-to-bottom"><a href="#" url="/Blog/" class="redirect">Blog</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">News</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">Photos</a></li>
-                            <li class="hvr-bounce-to-bottom"><a href="/UserController/" class="redirect">Manage User</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="/UserController/" class="redirect">Manage User</a>
+                            </li>
                         </ul>
                         <div class="sign-in" id="signIn">
                             <ul>
@@ -78,7 +84,7 @@
         <!-- //header -->
         <!-- header-bottom -->
         <div id="mainPage">
-            <%@include file="body.jsp"%>
+            <%@include file="body.jsp" %>
         </div>
 
         <!-- //header-bottom -->
@@ -86,10 +92,10 @@
 </div>
 <!-- //banner-body -->
 <!-- footer -->
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 <!-- //footer -->
 <!-- for bootstrap working -->
-<script src="/assets/js/bootstrap.js"> </script>
+<script src="/assets/js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
 
 <!-- Slider-starts-Here -->
@@ -116,7 +122,7 @@
 </script>
 
 <script type="text/javascript">
-    $(window).load(function() {
+    $(window).load(function () {
         $("#flexiselDemo1").flexisel({
             visibleItems: 3,
             animationSpeed: 1000,
@@ -126,15 +132,15 @@
             enableResponsiveBreakpoints: true,
             responsiveBreakpoints: {
                 portrait: {
-                    changePoint:480,
+                    changePoint: 480,
                     visibleItems: 1
                 },
                 landscape: {
-                    changePoint:640,
-                    visibleItems:2
+                    changePoint: 640,
+                    visibleItems: 2
                 },
                 tablet: {
-                    changePoint:768,
+                    changePoint: 768,
                     visibleItems: 3
                 }
             }
@@ -148,26 +154,46 @@
 <script type="text/javascript">
     bindRedirect();
 
-    var hideSignIn=function () {
+    var hideSignIn = function () {
         var userName = $("#user").val();
-       if(userName==null){
-           $("#signIn").show();
-       }else{
-           $("#signIn").empty();
-           $("#signIn").append(
-               '<ul>' +
-               '<li>' +'<a>'+userName+'</a>/'+
-               '</li>' +
-               '<li>' +'<a>Sing Out</a>'+
-               '</li>' +
-               '</ul>'
-           )
-       }
+        console.log(userName);
+        if (userName == "null") {
+            $("#signIn").show();
+        } else {
+            $("#signIn").empty();
+            $("#signIn").append(
+                '<ul>' +
+                '<li>' + '<a href="/UserController/getUser/id/<%=user%>">' + userName + '</a>/' +
+                '</li>' +
+                '<li>' + '<a href="/Account/LogOut">Sing Out</a>' +
+                '</li>' +
+                '</ul>'
+            )
+        }
     };
     $(document).ready(
         hideSignIn()
     )
 </script>
+
+<script src="/assets/js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true   // 100% fit in a container
+        });
+    });
+</script>
+
+<script src="/assets/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $(".swipebox").swipebox();
+    });
+</script>
+
 </body>
 </html>
 

@@ -41,15 +41,20 @@ public class LoginController {
                     session.setAttribute("userName",userName);
                     return "redirect:/";
                 } else {
-                    return null;
+                    return "redirect:/Account/Login";
                 }
             } else {
-                return null;
+                return "redirect:/Account/Login";
             }
         }else {
-            return null;
+            return "redirect:/Account/Login";
         }
+    }
 
+    @RequestMapping("/LogOut")
+    public String logOut(HttpSession session){
+        session.setAttribute("userName",null);
+        return "redirect:/";
     }
 
 }

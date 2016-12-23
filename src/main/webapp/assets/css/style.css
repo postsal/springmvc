@@ -41,7 +41,7 @@ body a:hover{
 /*-- header --*/
 .navbar-default {
   background:none !important;
-  border-color:none !important;
+  /*border-color:none !important;*/
 }
 a.navbar-brand {
   font-size: 3em;
@@ -369,7 +369,7 @@ a.navbar-brand:hover {
 #slider3-pager a ,#slider2-pager a,#slider4-pager a{
   padding: 0;
 }
-#slider3-pager li,#slider4-pager li,#slider2-pager li,{
+#slider3-pager li,#slider4-pager li,#slider2-pager li{
 	display:inline-block;
 }
 .rslides {
@@ -434,7 +434,7 @@ a.navbar-brand:hover {
 ul.social-slide li i{
 	width:70px;
 	height:74px;
-	background:url(../images/backward.png)no-repeat;
+	background:no-repeat;
 	display: inline-block;
 	margin:0px 15px;
 }
@@ -529,12 +529,12 @@ position:relative;
 .nbs-flexisel-nav-left {
 left: -4%;
 top: 15% !important;
-background: url(../images/3.png) no-repeat 0px 0px;
+background:  no-repeat 0px 0px;
 }
 .nbs-flexisel-nav-right {
 right: -4%;
 top: 15% !important;
-background: url(../images/3.png) no-repeat -66px 0px;
+background:  no-repeat -66px 0px;
 }
 /*--//flexisel--*/
 /*-- banner-bottom --*/
@@ -554,7 +554,7 @@ background: url(../images/3.png) no-repeat -66px 0px;
 .more a{
 	padding: 18px 46px 21px 20px;
 	color: #fff;
-	background: url(../images/img-sp.png) no-repeat 71px -194px #c34c21;
+	background:  no-repeat 71px -194px #c34c21;
 	display: block;
 	width: 150px;
 	height: 25px;
@@ -564,7 +564,7 @@ background: url(../images/3.png) no-repeat -66px 0px;
 	font-family: LobsterTwo-Regular;
 }
 a.sint:before{
-	background: url(../images/img-sp.png) no-repeat 71px -194px #F04709;
+	background:  no-repeat 71px -194px #F04709;
 	display: block;
 }
 .more a:hover{
@@ -640,7 +640,7 @@ p.para{
 .rd-mre a{
 	padding: 10px 30px;
 	color: #fff;
-	background: url(../images/img-sp.png) no-repeat 61px -191px #c34c21;
+	background:  no-repeat 61px -191px #c34c21;
 	display: block;
 	width: 130px;
 	text-decoration: none;
@@ -648,7 +648,7 @@ p.para{
 	font-family: LobsterTwo-Regular;
 }
 a.quod:before{
-	background: url(../images/img-sp.png) no-repeat 61px -191px #F04709;
+	background:  no-repeat 61px -191px #F04709;
 	display: block;
 }
 .blog-left-grid:nth-child(2){

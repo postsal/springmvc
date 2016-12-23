@@ -300,23 +300,6 @@
                             </div>
                         </div>
                     </div>
-                    <script src="/assets/js/easyResponsiveTabs.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                        $(document).ready(function () {
-                            $('#horizontalTab').easyResponsiveTabs({
-                                type: 'default', //Types: default, vertical, accordion
-                                width: 'auto', //auto or any width like 600px
-                                fit: true   // 100% fit in a container
-                            });
-                        });
-                    </script>
-                    <link rel="stylesheet" href="/assets/css/swipebox.css">
-                    <script src="/assets/js/jquery.swipebox.min.js"></script>
-                    <script type="text/javascript">
-                        jQuery(function($) {
-                            $(".swipebox").swipebox();
-                        });
-                    </script>
                 </div>
             </div>
             <div class="newsletter">
