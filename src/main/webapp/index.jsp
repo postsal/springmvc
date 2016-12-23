@@ -60,8 +60,8 @@
                         <ul class="nav navbar-nav">
                             <li class="hvr-bounce-to-bottom"><a href="" url="" class="redirect">Home</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" url="/Blog/" class="redirect">Blog</a></li>
-                            <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">News</a></li>
-                            <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">Photos</a></li>
+                            <%--<li class="hvr-bounce-to-bottom"><a href="#" class="redirect">News</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">Photos</a></li>--%>
                             <li class="hvr-bounce-to-bottom"><a href="/UserController/" class="redirect">Manage User</a>
                             </li>
                         </ul>
