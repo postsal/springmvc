@@ -34,16 +34,22 @@ public class LoginController {
                         @RequestParam("password") String password,
                         HttpSession session) {
         User user = userService.getUserByuserName(userName);
-        if (user != null) {
-            if (Objects.equals(user.getPassword(), password)) {
-                session.setAttribute("userName",userName);
-                return "redirect:/";
+        User user1 = (User) session.getAttribute("user");
+        if(user1==null){
+            if (user != null) {
+                if (Objects.equals(user.getPassword(), password)) {
+                    session.setAttribute("userName",userName);
+                    return "redirect:/";
+                } else {
+                    return null;
+                }
             } else {
                 return null;
             }
-        } else {
+        }else {
             return null;
         }
+
     }
 
 }

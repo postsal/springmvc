@@ -34,15 +34,15 @@
         </tr>
         <tr>
             <th>nickName</th>
-            <td>${user.firstName}</td>
+            <td>${user.nickName}</td>
         </tr>
         <tr>
             <th>emailAddress</th>
-            <td>${user.lastName}</td>
+            <td>${user.emailAddress}</td>
         </tr>
         <tr>
             <th>Password</th>
-            <td>${user.address}</td>
+            <td>${user.password}</td>
         </tr>
     </table>
 </div>

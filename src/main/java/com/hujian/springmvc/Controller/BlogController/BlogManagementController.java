@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by hujian on 2016/12/6.
  */
 @Controller
-@RequestMapping("/BlogManagement")
+@RequestMapping("/Blog")
 public class BlogManagementController {
     @RequestMapping("/")
     public String index(){

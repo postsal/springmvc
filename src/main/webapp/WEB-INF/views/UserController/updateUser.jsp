@@ -10,7 +10,7 @@
     <title>SpringMVC 更新用户</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,24 +26,24 @@
 
     <form:form action="/UserController/modifyUser/userP" method="post" commandName="userP" role="form">
         <div class="form-group">
-            <label for="userName">Nickname:</label>
+            <label for="userName">userName:</label>
             <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter userName:"
                    value="${user.userName}"/>
         </div>
         <div class="form-group">
-            <label for="firstName">First Name:</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter FirstName:"
-                   value="${user.firstName}"/>
+            <label for="firstName">nickName:</label>
+            <input type="text" class="form-control" id="firstName" name="nickName" placeholder="Enter FirstName:"
+                   value="${user.nickName}"/>
         </div>
         <div class="form-group">
-            <label for="lastName">Last Name:</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter LastName:"
-                   value="${user.lastName}"/>
+            <label for="lastName">emailAddress:</label>
+            <input type="text" class="form-control" id="lastName" name="emailAddress" placeholder="Enter LastName:"
+                   value="${user.emailAddress}"/>
         </div>
         <div class="form-group">
-            <label for="address">Password:</label>
-            <input type="text" class="form-control" id="address" name="address" placeholder="Enter address:"
-                   value="${user.address}"/>
+            <label for="address">password:</label>
+            <input type="text" class="form-control" id="address" name="password" placeholder="Enter address:"
+                   value="${user.password}"/>
         </div>
         <!-- 把 id 一并写入 userP 中 -->
         <input type="hidden" id="id" name="id" value="${user.id}"/>
@@ -57,9 +57,9 @@
 
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 </body>
 </html>

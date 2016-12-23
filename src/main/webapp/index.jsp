@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.hujian.springmvc.Model.User" %><%--
   Created by IntelliJ IDEA.
   User: hujian
   Date: 2016/11/26
@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<% String user= (String) session.getAttribute("userName");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +31,7 @@
 </head>
 
 <body>
+<input type="hidden" id="user" value="<%=user%>">
 <!-- banner-body -->
 <div class="banner-body">
     <div class="container">
@@ -51,15 +53,15 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="hvr-bounce-to-bottom"><a href="" class="redirect">Home</a></li>
-                            <li class="hvr-bounce-to-bottom"><a href="#" url="" class="redirect">Blog</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="" url="" class="redirect">Home</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="#" url="/Blog/" class="redirect">Blog</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">News</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="#" class="redirect">Photos</a></li>
                             <li class="hvr-bounce-to-bottom"><a href="/UserController/" class="redirect">Manage User</a></li>
                         </ul>
-                        <div class="sign-in" id="hide">
+                        <div class="sign-in" id="signIn">
                             <ul>
-                                <li><a href="#" url="/Account/Login" class="redirect">Sign In </a>/</li>
+                                <li><a href="#" url="/Account/Login" class="redirect">Sign In</a>/</li>
                                 <li><a href="#" url="/Register/" class="redirect">Register</a></li>
                             </ul>
                         </div>
@@ -145,6 +147,26 @@
 <script src="/app/js/app.utils.js"></script>
 <script type="text/javascript">
     bindRedirect();
+
+    var hideSignIn=function () {
+        var userName = $("#user").val();
+       if(userName==null){
+           $("#signIn").show();
+       }else{
+           $("#signIn").empty();
+           $("#signIn").append(
+               '<ul>' +
+               '<li>' +'<a>'+userName+'</a>/'+
+               '</li>' +
+               '<li>' +'<a>Sing Out</a>'+
+               '</li>' +
+               '</ul>'
+           )
+       }
+    };
+    $(document).ready(
+        hideSignIn()
+    )
 </script>
 </body>
 </html>

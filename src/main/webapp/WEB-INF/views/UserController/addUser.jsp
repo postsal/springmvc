@@ -11,7 +11,7 @@
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,15 +30,15 @@
             <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter userName:"/>
         </div>
         <div class="form-group">
-            <label for="nickName">First Name:</label>
+            <label for="nickName">nickName:</label>
             <input type="text" class="form-control" id="nickName" name="nickName" placeholder="Enter nickName:"/>
         </div>
         <div class="form-group">
-            <label for="emailAddress">Last Name:</label>
+            <label for="emailAddress">emailAddress:</label>
             <input type="text" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter emailAddress:"/>
         </div>
         <div class="form-group">
-            <label for="password">Address:</label>
+            <label for="password">password:</label>
             <input type="text" class="form-control" id="password" name="password" placeholder="Enter password:"/>
         </div>
         <div class="form-group">
@@ -49,9 +49,9 @@
 </div>
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 </body>
 </html>
