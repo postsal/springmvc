@@ -19,35 +19,28 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    /**
-     * 进入注册页面
-     * @return
-     */
-    @GetMapping("/Login")
-    public String index() {
-        return "System/Login";
-    }
-
-
-    @PostMapping("/Login")
-    public String login(@RequestParam("userName") String userName,
-                        @RequestParam("password") String password,
+    @RequestMapping("/Login")
+    public String login(@RequestParam(value = "userName",required = false) String userName,
+                        @RequestParam(value = "password",required = false) String password,
                         HttpSession session) {
+        if(userName==null){
+            return "System/Login";
+        }
         User user = userService.getUserByuserName(userName);
-        User user1 = (User) session.getAttribute("user");
-        if(user1==null){
+        String sessionUserName = (String) session.getAttribute("userName");
+        if(sessionUserName==null){
             if (user != null) {
                 if (Objects.equals(user.getPassword(), password)) {
                     session.setAttribute("userName",userName);
                     return "redirect:/";
                 } else {
-                    return "redirect:/Account/Login";
+                    return "System/Login";
                 }
             } else {
-                return "redirect:/Account/Login";
+                return "System/Login";
             }
         }else {
-            return "redirect:/Account/Login";
+            return "redirect:/";
         }
     }
 
